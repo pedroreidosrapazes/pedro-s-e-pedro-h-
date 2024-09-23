@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        
+        var num = [[], [], []];
+        
+  num[0][0] = parseInt(prompt("Digite um número "));
+   num[0][1] = parseInt(prompt("Digite um número" ));
+   num[0][2] = parseInt(prompt("Digite um número"));
+
+   num[1][0] = parseInt(prompt("Digite um número"));
+   num[1][1] = parseInt(prompt("Digite um número "));
+  num[1][2] = parseInt(prompt("Digite um número "));
+
+   num[2][0] = parseInt(prompt("Digite um número"));
+   num[2][1] = parseInt(prompt("Digite um número "));
+   num[2][2] = parseInt(prompt("Digite um número"));
+
+
+        document.write("Números do 1 array: " + num[0] + "<br>");
+        document.write("Números do 2 array: " + num[1] + "<br>");
+        document.write("Números do 3 array: " + num[2] + "<br>");
+
+
+ var totalSoma = 0;
+
+   num.forEach(function(array) {
+  totalSoma += array.reduce(function(soma, valor) {
+    return soma + valor;
+   }, 0);
+  });
+  
+  document.write("Soma total dos valores: " + totalSoma);
+    </script>
+</body>
+</html>
